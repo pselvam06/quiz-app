@@ -1,0 +1,107 @@
+/* General container styles */
+.quiz-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Question style */
+.question-text {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Options list setup */
+.options-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual option button/list item */
+.option {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  text-align: left;
+}
+
+.option:not(.disabled):hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* --- Conditional Rendering Styles --- */
+
+/* Style for the CORRECT selected answer */
+.option.correct {
+  background-color: #d4edda; /* Light green */
+  border-color: #28a745; /* Darker green */
+  color: #155724;
+  font-weight: bold;
+}
+
+/* Style for the WRONG selected answer */
+.option.wrong {
+  background-color: #f8d7da; /* Light red */
+  border-color: #dc3545; /* Darker red */
+  color: #721c24;
+  font-weight: bold;
+}
+
+/* Highlight the correct answer when a wrong answer was picked */
+.option.correct-unselected {
+    background-color: #fff3cd; /* Light yellow */
+    border-color: #ffc107;
+    color: #856404;
+}
+
+/* Disable clicking/hover on all options after selection */
+.option.disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+/* Feedback Section */
+.feedback-section {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 2px dashed #ccc;
+}
+
+.feedback {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.correct-text {
+  color: #28a745;
+}
+
+.wrong-text {
+  color: #dc3545;
+}
+
+/* Button style */
+.next-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
